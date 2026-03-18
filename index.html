@@ -18,126 +18,197 @@
 
     <script>
         const tripData = {
-            title: "South America 2025",
-            dates: "Nov 23 – Dec 14",
+            title: "South America Expedition",
+            dates: "Nov 23 – Dec 15",
             days: [
+                {
+                    tabName: "Nov 23", dateText: "Nov 23: The Long Haul Begins", country: "HK → PE", icon: "🇭🇰 / 🇵🇪",
+                    dateCode: "2025-11-23", coords: { lat: -13.5226, lon: -71.9673 },
+                    acc: { outName: "Hong Kong", outLink: "", inName: "Cusco Airbnb", inLink: "https://maps.google.com/?q=Santa+Teresa+379+Cusco+08002" },
+                    events: [
+                        { time: "00:30", commute: "Flight ✈️", transitNo: "CX315", title: "HKG to MAD", desc: "15 hrs flight to Madrid." },
+                        { time: "13:10", commute: "Flight ✈️", transitNo: "IB125", title: "MAD to LIM", desc: "15 hrs flight to Lima." },
+                        { time: "22:00", commute: "Flight ✈️", transitNo: "LA2221", title: "LIM to CUZ", desc: "Arrive in Cusco at 23:25. Total 38.7hrs transit." }
+                    ]
+                },
+                {
+                    tabName: "Nov 24", dateText: "Nov 24: Cusco Exploration", country: "Peru", icon: "🇵🇪",
+                    dateCode: "2025-11-24", coords: { lat: -13.5226, lon: -71.9673 },
+                    acc: { outName: "Cusco Airbnb", outLink: "", inName: "Cusco Airbnb", inLink: "https://maps.google.com/?q=Santa+Teresa+379+Cusco+08002" },
+                    events: [
+                        { time: "Day", commute: "Walk 🚶", title: "Explore Cusco", desc: "Visit rainbow mountain office (Calle Garcilaso 210, Office 204). Pay USD85 cash." },
+                        { time: "Eve", title: "Dinner & Relax", desc: "Acclimatize to the altitude." }
+                    ]
+                },
                 {
                     tabName: "Nov 25", dateText: "Nov 25: Machu Picchu", country: "Peru", icon: "🇵🇪",
                     dateCode: "2025-11-25", coords: { lat: -13.1631, lon: -72.5450 },
-                    acc: { outName: "Cusco Airbnb", outLink: "", inName: "Cusco Airbnb", inLink: "" },
+                    acc: { outName: "Cusco Airbnb", outLink: "", inName: "Tierra Viva Machu Picchu", inLink: "https://maps.google.com/?q=Av.+Hermanos+Ayar+401+Machu+Picchu" },
                     events: [
-                        { time: "05:10", commute: "Train/Bus 🚆", transitNo: "Bimodal", title: "Journey Start", desc: "Start time for the Bimodal service." },
-                        { time: "05:30", commute: "Bus 🚌", title: "Bus Up", desc: "Bus to Machu Picchu operates 05:30 - 15:30." },
-                        { time: "17:30", commute: "Bus 🚌", title: "Drop Bus", desc: "Return bus operates 06:00 - 17:30." }
+                        { time: "05:10", commute: "Train/Bus 🚆", transitNo: "EXP 83", title: "Bimodal Service", desc: "Wanchaq to Machu Picchu. Bus up 05:30-15:30." },
+                        { time: "11:00", title: "Machu Picchu Circuit", desc: "Classic Circuit - lower terrace (circuit 2 - route 2B). Random seat allocation on train." },
+                        { time: "Eve", title: "Dinner", desc: "Dinner in Aguas Calientes. Drop bus operates 06:00 - 17:30." }
                     ]
                 },
                 {
-                    tabName: "Nov 27", dateText: "Nov 27: Transit to Bolivia", country: "Peru → BO", icon: "🇵🇪 / 🇧🇴",
+                    tabName: "Nov 26", dateText: "Nov 26: Return to Cusco", country: "Peru", icon: "🇵🇪",
+                    dateCode: "2025-11-26", coords: { lat: -13.5226, lon: -71.9673 },
+                    acc: { outName: "Tierra Viva Machu Picchu", outLink: "", inName: "Cusco Airbnb", inLink: "https://maps.google.com/?q=Santa+Teresa+379+Cusco+08002" },
+                    events: [
+                        { time: "06:00", title: "Machu Picchu Re-entry", desc: "Circuit 1 - route 1A. 朝8晚8食一次藥." },
+                        { time: "15:20", commute: "Train/Bus 🚆", transitNo: "EXP 34", title: "Return to Cusco", desc: "Bimodal service to Wanchaq. Arrive 19:45." }
+                    ]
+                },
+                {
+                    tabName: "Nov 27", dateText: "Nov 27: Rainbow Mountain", country: "Peru → BO", icon: "🇵🇪 / 🇧🇴",
                     dateCode: "2025-11-27", coords: { lat: -13.5226, lon: -71.9673 },
                     acc: { outName: "Cusco Airbnb", outLink: "", inName: "Trans Salvador Bus", inLink: "" },
                     events: [
-                        { time: "22:00", commute: "Bus 🚌", transitNo: "Overnight", title: "Depart Cusco", desc: "Overnight bus departs for La Paz." }
+                        { time: "04:00", commute: "Hike 🥾", title: "Pallay Punchu Tour", desc: "1 Day Hike. 食藥 at 0400, 1200, 2000. 行直線test，食香蕉." },
+                        { time: "18:00", commute: "Bus 🚌", title: "Return Shuttle", desc: "Back to hotel." },
+                        { time: "22:00", commute: "Bus 🚌", transitNo: "Overnight", title: "Bus to La Paz", desc: "Trans Salvador. Arrive 30 mins before dep." }
                     ]
                 },
                 {
-                    tabName: "Nov 28", dateText: "Nov 28: Arrival in La Paz", country: "Bolivia", icon: "🇧🇴",
+                    tabName: "Nov 28", dateText: "Nov 28: La Paz Rest Day", country: "Bolivia", icon: "🇧🇴",
                     dateCode: "2025-11-28", coords: { lat: -16.4897, lon: -68.1193 },
-                    acc: { outName: "Trans Salvador Bus", outLink: "", inName: "Hotel Rosario La Paz", inLink: "" },
+                    acc: { outName: "Trans Salvador Bus", outLink: "", inName: "Hotel Rosario La Paz", inLink: "https://maps.google.com/?q=Av.+Illampu+704+La+Paz" },
                     events: [
-                        { time: "13:00", commute: "Bus 🚌", title: "Arrive in La Paz", desc: "Approximate arrival time." },
-                        { time: "Aft", title: "Check-in", desc: "Settle into Hotel Rosario La Paz." } 
+                        { time: "13:00", title: "Arrive in La Paz", desc: "早晚食藥. Rest and acclimatize." }
                     ]
                 },
                 {
-                    tabName: "Nov 29", dateText: "Nov 29: Uyuni Salt Flats", country: "Bolivia", icon: "🇧🇴",
+                    tabName: "Nov 29", dateText: "Nov 29: Uyuni Tour Day 1", country: "Bolivia", icon: "🇧🇴",
                     dateCode: "2025-11-29", coords: { lat: -20.4597, lon: -66.8250 },
-                    acc: { outName: "Hotel Rosario La Paz", outLink: "", inName: "Uyuni Accommodation", inLink: "" },
+                    acc: { outName: "Hotel Rosario La Paz", outLink: "", inName: "Salt Hotel Magia del Salar", inLink: "" },
                     events: [
-                        { time: "Morn", commute: "Flight ✈️", title: "Flight to Uyuni", desc: "Domestic flight to the salt flats." },
-                        { time: "10:00", title: "Uyuni Tour Begins", desc: "Start of the 3-Days Tour to the Uyuni Salt Flat." }
+                        { time: "07:40", commute: "Flight ✈️", transitNo: "OB304", title: "Flight to Uyuni", desc: "Arrive 08:40. 早晚食藥. Airport pickup included." },
+                        { time: "Day", commute: "Tour 🚙", title: "Salar de Uyuni", desc: "3 day tour day 1 begins. Visit Train Cemetery." }
                     ]
                 },
                 {
-                    tabName: "Dec 2", dateText: "Dec 2: Buenos Aires Bound", country: "BO → AR", icon: "🇧🇴 / 🇦🇷",
+                    tabName: "Nov 30", dateText: "Nov 30: Uyuni Tour Day 2", country: "Bolivia", icon: "🇧🇴",
+                    dateCode: "2025-11-30", coords: { lat: -22.2033, lon: -67.7963 },
+                    acc: { outName: "Salt Hotel Magia del Salar", outLink: "", inName: "Hostal Los Andes", inLink: "" },
+                    events: [
+                        { time: "Day", commute: "Tour 🚙", title: "National Reserve", desc: "Eduardo Avaroa National Reserve (10 hrs). 早晚食藥." },
+                        { time: "Aft", title: "Volcan Ollague", desc: "Stop for 3 hours." }
+                    ]
+                },
+                {
+                    tabName: "Dec 1", dateText: "Dec 1: Uyuni Tour Day 3", country: "Bolivia", icon: "🇧🇴",
+                    dateCode: "2025-12-01", coords: { lat: -20.4597, lon: -66.8250 },
+                    acc: { outName: "Hostal Los Andes", outLink: "", inName: "Hotel de Sal Atipax", inLink: "https://maps.google.com/?q=Calle+Mexico+esquina+Junin+Uyuni" },
+                    events: [
+                        { time: "Day", commute: "Tour 🚙", title: "Salvador Dali Desert", desc: "Stop for 9 hours. 早晚食藥." }
+                    ]
+                },
+                {
+                    tabName: "Dec 2", dateText: "Dec 2: Transit to BA", country: "BO → AR", icon: "🇧🇴 / 🇦🇷",
                     dateCode: "2025-12-02", coords: { lat: -34.6037, lon: -58.3816 },
-                    acc: { outName: "Uyuni", outLink: "", inName: "Posadas de las aguilas", inLink: "" },
+                    acc: { outName: "Hotel de Sal Atipax", outLink: "", inName: "Posadas de las aguilas", inLink: "https://maps.google.com/?q=Jose+Hernandez+128+Ezeiza" },
                     events: [
-                        { time: "Morn", commute: "Flight ✈️", title: "Return to La Paz", desc: "Flight back from Uyuni." },
-                        { time: "Day", commute: "Flight ✈️", title: "Flight to EZE", desc: "Connecting flight through VVI to Buenos Aires." },
-                        { time: "Night", title: "Check-in", desc: "Rest at Posadas de las aguilas." }
+                        { time: "09:15", commute: "Flight ✈️", title: "UYU to La Paz", desc: "Arrive 10:15." },
+                        { time: "17:05", commute: "Flight ✈️", transitNo: "OB680", title: "La Paz to VVI", desc: "Arrive 18:10." },
+                        { time: "21:30", commute: "Flight ✈️", transitNo: "OB700", title: "VVI to EZE", desc: "Arrive Buenos Aires 01:30. Pending airport shuttle." }
                     ]
                 },
                 {
-                    tabName: "Dec 3", dateText: "Dec 3: Exploring BA", country: "Argentina", icon: "🇦🇷",
+                    tabName: "Dec 3", dateText: "Dec 3: Buenos Aires", country: "Argentina", icon: "🇦🇷",
                     dateCode: "2025-12-03", coords: { lat: -34.6037, lon: -58.3816 },
-                    acc: { outName: "Posadas de las aguilas", outLink: "", inName: "Bromelia Hotel Boutique", inLink: "" },
+                    acc: { outName: "Posadas de las aguilas", outLink: "", inName: "Bromelia Hotel Boutique", inLink: "https://maps.google.com/?q=4742+Honduras+Buenos+Aires" },
                     events: [
-                        { time: "15:00", title: "Check-in", desc: "Move to Bromelia Hotel Boutique in the city." }
+                        { time: "Day", title: "Explore BA", desc: "Explore Malbec wine. Consider Tango show." }
                     ]
                 },
                 {
-                    tabName: "Dec 5", dateText: "Dec 5: Patagonia", country: "Argentina", icon: "🇦🇷",
+                    tabName: "Dec 4", dateText: "Dec 4: Buenos Aires", country: "Argentina", icon: "🇦🇷",
+                    dateCode: "2025-12-04", coords: { lat: -34.6037, lon: -58.3816 },
+                    acc: { outName: "Bromelia Hotel Boutique", outLink: "", inName: "Bromelia Hotel Boutique", inLink: "https://maps.google.com/?q=4742+Honduras+Buenos+Aires" },
+                    events: [
+                        { time: "Day", title: "Explore BA", desc: "City exploration continues." }
+                    ]
+                },
+                {
+                    tabName: "Dec 5", dateText: "Dec 5: Hello Patagonia", country: "Argentina", icon: "🇦🇷",
                     dateCode: "2025-12-05", coords: { lat: -50.3380, lon: -72.2648 },
-                    acc: { outName: "Bromelia Hotel Boutique", outLink: "", inName: "Tierra Tahuelche", inLink: "" },
+                    acc: { outName: "Bromelia Hotel Boutique", outLink: "", inName: "Tierra Tehuelch", inLink: "https://maps.google.com/?q=Los+Antiguos+135+El+Calafate" },
                     events: [
-                        { time: "11:00", title: "Checkout", desc: "Leave Bromelia Hotel Boutique." },
-                        { time: "16:00", commute: "Flight ✈️", transitNo: "FO 5554", title: "Fly to El Calafate", desc: "Flybondi flight departs." },
-                        { time: "19:15", title: "Arrival", desc: "Land in FTE and check into Tierra Tahuelche." }
+                        { time: "06:35", commute: "Flight ✈️", transitNo: "FO5550", title: "EZE to FTE", desc: "Flybondi flight to El Calafate. Arrive 09:50." }
                     ]
                 },
                 {
-                    tabName: "Dec 6", dateText: "Dec 6: Big Ice Trek", country: "Argentina", icon: "🇦🇷",
+                    tabName: "Dec 6", dateText: "Dec 6: Glacier Tour", country: "Argentina", icon: "🇦🇷",
                     dateCode: "2025-12-06", coords: { lat: -50.3380, lon: -72.2648 },
-                    acc: { outName: "Tierra Tahuelche", outLink: "", inName: "Tierra Tahuelche", inLink: "" },
+                    acc: { outName: "Tierra Tehuelch", outLink: "", inName: "Tierra Tehuelch", inLink: "https://maps.google.com/?q=Los+Antiguos+135+El+Calafate" },
                     events: [
-                        { time: "07:00", commute: "Tour Bus 🚌", title: "Big Ice Excursion", desc: "Pick up directly from your hotel." }
+                        { time: "Day", commute: "Tour 🚌", title: "Perito Moreno", desc: "Full-day Perito Moreno Glacier tour." }
                     ]
                 },
                 {
-                    tabName: "Dec 7", dateText: "Dec 7: El Chalten", country: "Argentina", icon: "🇦🇷",
+                    tabName: "Dec 7", dateText: "Dec 7: El Chaltén", country: "Argentina", icon: "🇦🇷",
                     dateCode: "2025-12-07", coords: { lat: -49.3315, lon: -72.8863 },
-                    acc: { outName: "Tierra Tahuelche", outLink: "", inName: "El Chalten Accommodation", inLink: "" },
+                    acc: { outName: "Tierra Tehuelch", outLink: "", inName: "Lionel Terray 206", inLink: "https://maps.google.com/?q=Lionel+Terray+206+El+Chalten" },
                     events: [
-                        { time: "Day", title: "Relocate", desc: "Travel to El Chalten for a two-night stay." } 
+                        { time: "08:00", commute: "Bus 🚌", title: "Bus to El Chaltén", desc: "Depart from Ómnibus de El Calafate." }
                     ]
                 },
                 {
-                    tabName: "Dec 9", dateText: "Dec 9: El Calafate Return", country: "Argentina", icon: "🇦🇷",
-                    dateCode: "2025-12-09", coords: { lat: -50.3380, lon: -72.2648 },
-                    acc: { outName: "El Chalten Accommodation", outLink: "", inName: "Aikendor Hotel Panoramico", inLink: "" },
+                    tabName: "Dec 8", dateText: "Dec 8: Patagonia Hike", country: "Argentina", icon: "🇦🇷",
+                    dateCode: "2025-12-08", coords: { lat: -49.3315, lon: -72.8863 },
+                    acc: { outName: "Lionel Terray 206", outLink: "", inName: "Lionel Terray 206", inLink: "https://maps.google.com/?q=Lionel+Terray+206+El+Chalten" },
                     events: [
-                        { time: "Day", title: "Return Journey", desc: "Head back to El Calafate and check in." }
+                        { time: "Day", commute: "Hike 🥾", title: "El Chaltén Trails", desc: "Full day of hiking in the national park." }
+                    ]
+                },
+                {
+                    tabName: "Dec 9", dateText: "Dec 9: Return to Calafate", country: "Argentina", icon: "🇦🇷",
+                    dateCode: "2025-12-09", coords: { lat: -50.3380, lon: -72.2648 },
+                    acc: { outName: "Lionel Terray 206", outLink: "", inName: "Aikendor Hotel", inLink: "https://maps.google.com/?q=Rio+Santa+Cruz+2340+El+Calafate" },
+                    events: [
+                        { time: "Day", commute: "Hike 🥾", title: "Morning Hike", desc: "Final hike in El Chaltén." },
+                        { time: "19:30", commute: "Bus 🚌", title: "Bus to El Calafate", desc: "Depart from Terminal de Omnibus El Chalten." }
                     ]
                 },
                 {
                     tabName: "Dec 10", dateText: "Dec 10: Iguazu Falls", country: "Argentina", icon: "🇦🇷",
                     dateCode: "2025-12-10", coords: { lat: -25.5991, lon: -54.5736 },
-                    acc: { outName: "Aikendor Hotel Panoramico", outLink: "", inName: "Uru Apart Iguazu", inLink: "" },
+                    acc: { outName: "Aikendor Hotel", outLink: "", inName: "Uru Apart Iguazu", inLink: "https://maps.google.com/?q=El+Uru+27+Puerto+Iguazu" },
                     events: [
-                        { time: "Day", commute: "Flight ✈️", title: "Fly to IGR", desc: "Flight from El Calafate to Iguazu." },
-                        { time: "Aft", title: "Check-in", desc: "Settle into Uru Apart Iguazu." } 
+                        { time: "08:20", commute: "Flight ✈️", title: "FTE to AEP", desc: "Arrive 11:20." },
+                        { time: "16:30", commute: "Flight ✈️", title: "AEP to IGR", desc: "Arrive 18:25 in Iguazu." }
+                    ]
+                },
+                {
+                    tabName: "Dec 11", dateText: "Dec 11: Iguazu (ARG side)", country: "Argentina", icon: "🇦🇷",
+                    dateCode: "2025-12-11", coords: { lat: -25.5991, lon: -54.5736 },
+                    acc: { outName: "Uru Apart Iguazu", outLink: "", inName: "Uru Apart Iguazu", inLink: "https://maps.google.com/?q=El+Uru+27+Puerto+Iguazu" },
+                    events: [
+                        { time: "Day", title: "Argentine Side", desc: "Visit Argentine side of falls. Research Brazil entry requirements." }
                     ]
                 },
                 {
                     tabName: "Dec 12", dateText: "Dec 12: Sao Paulo", country: "AR → BR", icon: "🇦🇷 / 🇧🇷",
                     dateCode: "2025-12-12", coords: { lat: -23.5505, lon: -46.6333 },
-                    acc: { outName: "Uru Apart Iguazu", outLink: "", inName: "Laghetto Stilo Sao Paulo", inLink: "" },
+                    acc: { outName: "Uru Apart Iguazu", outLink: "", inName: "Laghetto Stilo", inLink: "https://maps.google.com/?q=836+Rua+Coronel+Oscar+Porto+Sao+Paulo" },
                     events: [
-                        { time: "Day", commute: "Flight ✈️", title: "Fly to GRU", desc: "Cross into Brazil." },
-                        { time: "Aft", title: "Check-in", desc: "Check into Laghetto Stilo Sao Paulo." } 
+                        { time: "Morn", commute: "Bus 🚌", title: "Cross Border", desc: "40 mins bus to Brazilian side of falls." },
+                        { time: "19:35", commute: "Flight ✈️", transitNo: "LA3205", title: "IGU to GRU", desc: "Arrive Sao Paulo 21:25. Final packing." }
                     ]
                 },
                 {
                     tabName: "Dec 13", dateText: "Dec 13: Journey Home", country: "BR → HK", icon: "🇧🇷 / 🇭🇰",
                     dateCode: "2025-12-13", coords: { lat: -23.5505, lon: -46.6333 },
-                    acc: { outName: "Laghetto Stilo Sao Paulo", outLink: "", inName: "In Transit", inLink: "" },
+                    acc: { outName: "Laghetto Stilo", outLink: "", inName: "In Transit", inLink: "" },
                     events: [
-                        { time: "18:00", commute: "Flight ✈️", transitNo: "LA8072", title: "Depart GRU", desc: "LATAM flight departs for Milan." },
-                        { time: "09:15 (+1)", commute: "Flight ✈️", transitNo: "CX234", title: "Connection", desc: "Connect in MXP for Cathay Pacific flight home." }
+                        { time: "Day", title: "Explore SP", desc: "Explore São Paulo and buy souvenirs." },
+                        { time: "18:00", commute: "Flight ✈️", transitNo: "LA8072", title: "GRU to MXP", desc: "Depart for Milan (Arrives 09:45 next day)." },
+                        { time: "11:55", commute: "Flight ✈️", transitNo: "CX234", title: "MXP to HKG", desc: "Connect in Milan for final flight home." }
                     ]
                 }
             ]
         };
+
 
         // =========================================================================
         // 🛑 DO NOT TOUCH THE CODE BELOW THIS LINE 
